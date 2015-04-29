@@ -1,0 +1,20 @@
+1.
+
+if (Condition A) {
+    do something;
+} else if (Condition B) {
+    return something;
+} else {
+    return somthing;
+}
+
+are DIFFERENT from
+
+
+if (Condition A) {
+    do something;
+} else if (Condition B) {
+    return something;
+}
+
+return somthing;

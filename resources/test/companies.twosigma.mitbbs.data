@@ -1,0 +1,5 @@
+KOnesNBits kOnesNBits
+FizzBuzz getFizzBuzz
+RandomPasswordGenerator generate
+NoLoopTrianglePrinter print
+ITOA myitoa
