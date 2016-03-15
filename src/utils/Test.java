@@ -123,7 +123,7 @@ public class Test {
         System.out.println("test case passed");
     }
 
-    public static<T> void assertEquals(int[] expected, int[] actual) {
+    public static void assertEquals(int[] expected, int[] actual) {
         if (expected == null && actual == null) {
             System.out.println("test case passed");
             return;

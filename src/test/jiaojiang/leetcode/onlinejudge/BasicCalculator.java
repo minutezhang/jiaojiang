@@ -8,18 +8,17 @@ import java.lang.reflect.Method;
 /**
  * @author zhang
  *
- * Created on Mar 10, 2016
+ * Created on Mar 12, 2016
  */
-public class MaximalSquare {
+public class BasicCalculator {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
-            Method method = Class.forName(packageName + "." + className).getMethod(methodName, char[][].class);
-            Test.assertEquals(4, method.invoke(null, (Object)new char[][]{
-                    {'1', '0', '1', '0', '0'},
-                    {'1', '0', '1', '1', '1'},
-                    {'1', '1', '1', '1', '1'},
-                    {'1', '0', '0', '1', '0'}
-            }));
+            Method method = Class.forName(packageName + "." + className).getMethod(methodName, String.class);
+            Test.assertEquals(2, method.invoke(null, "1 + 1"));
+            Test.assertEquals(0, method.invoke(null, "1-1"));
+            Test.assertEquals(3, method.invoke(null, " 2-1 + 2 "));
+            Test.assertEquals(23, method.invoke(null, "(1+(4+5+2)-3)+(6+8)"));
+            Test.assertEquals(3, method.invoke(null, "10-(7-(8-(9-6)-(3+2)))"));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

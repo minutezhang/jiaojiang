@@ -8,18 +8,13 @@ import java.lang.reflect.Method;
 /**
  * @author zhang
  *
- * Created on Mar 10, 2016
+ * Created on Mar 14, 2016
  */
-public class MaximalSquare {
+public class ProductOfArrayExceptSelf {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
-            Method method = Class.forName(packageName + "." + className).getMethod(methodName, char[][].class);
-            Test.assertEquals(4, method.invoke(null, (Object)new char[][]{
-                    {'1', '0', '1', '0', '0'},
-                    {'1', '0', '1', '1', '1'},
-                    {'1', '1', '1', '1', '1'},
-                    {'1', '0', '0', '1', '0'}
-            }));
+            Method method = Class.forName(packageName + "." + className).getMethod(methodName, int[].class);
+            Test.assertEquals(new int[]{24, 12, 8, 6}, (int[])method.invoke(null, (Object)new int[]{1, 2, 3, 4}));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();
