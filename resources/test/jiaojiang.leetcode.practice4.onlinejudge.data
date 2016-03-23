@@ -52,3 +52,17 @@ LowestCommonAncestorOfABinarySearchTree lowestCommonAncestor
 LowestCommonAncestorOfABinaryTree lowestCommonAncestor
 DeleteNodeInALinkedList deleteNode
 ProductOfArrayExceptSelf productExceptSelf
+SlidingWindowMaximum maxSlidingWindow
+SearchA2DMatrixII searchMatrix
+ValidAnagram isAnagram
+DifferentWaysToAddParentheses diffWaysToCompute
+BinaryTreePaths binaryTreePaths
+AddDigits addDigits
+AddDigits addDigits2
+UglyNumber isUgly
+UglyNumberII nthUglyNumber
+MissingNumber missingNumber
+HIndex hIndex
+HIndex hIndex2
+HIndexII hIndex
+SingleNumberIII singleNumber
