@@ -2,13 +2,81 @@ package utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collection;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 /**
  * @author: mizhang
  * @since: Sep 10, 2013 10:52:40 AM
  */
 public class Utils {
+    public static int[] getData(String filename) {
+        InputStream is  = Utils.class.getResourceAsStream("/" + filename);
+        try {
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String line = br.readLine();
+            int[] ret = new int[Integer.parseInt(line)];
+
+            for ( int i = 0; i < ret.length && (line = br.readLine()) != null; i++) {
+                ret[i] = Integer.parseInt(line);
+            }
+
+            br.close();
+            isr.close();
+            is.close();
+
+            return ret;
+        } catch (IOException e) {
+            return new int[0];
+        }
+    }
+
+    public static List<Integer> toList(int[] data) {
+        List<Integer> ret = new ArrayList<Integer>();
+
+        for (int i : data) {
+            ret.add(i);
+        }
+
+        return ret;
+    }
+
+
     public static<T> List<T> getList(T[] object) {
+        List<T> list = new ArrayList<T>()  {
+            @Override
+            public boolean equals(Object anotherList) {
+                if (anotherList.getClass() != this.getClass()) {
+                    return false;
+                }
+
+                if ( ((ArrayList<T>) anotherList).size() != this.size()) {
+                    return false;
+                }
+
+                for (int i = 0; i < this.size(); i++) {
+                    if ( ((ArrayList<T>) anotherList).get(i).equals(this.get(i))) {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        };
+
+        for (T t : object) {
+            list.add(t);
+        }
+
+        return list;
+    }
+
+
+    public static<T> List<T> getList(Collection<T> object) {
         List<T> list = new ArrayList<T>()  {
             @Override
             public boolean equals(Object anotherList) {
