@@ -1,6 +1,7 @@
 package test.jiaojiang.leetcode.onlinejudge;
 
 import utils.Test;
+import utils.Utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -19,11 +20,11 @@ public class BurstBalloons {
             if (!"maxCoins".equals(methodName)) {
                     long time = System.nanoTime();
                     Test.assertEquals(1654, method.invoke(null, new int[]{7, 9, 8, 0, 7, 1, 3, 5, 5, 2, 3}));
-                    System.out.println("Large case: it takes " + (System.nanoTime() - time) / 1000000 + "ms to run method " + methodName);
+                    Utils.printElapsedTime(time, methodName);
                 if (!"maxCoins2".equals(methodName)) {
                     time = System.nanoTime();
                     Test.assertEquals(3446, method.invoke(null, new int[]{8, 2, 6, 8, 9, 8, 1, 4, 1, 5, 3, 0, 7, 7, 0, 4, 2, 2}));
-                    System.out.println("Large case: it takes " + (System.nanoTime() - time) / 1000000 + "ms to run method " + methodName);
+                    Utils.printElapsedTime(time, methodName);
                 }
             }
         } catch (Exception e) {

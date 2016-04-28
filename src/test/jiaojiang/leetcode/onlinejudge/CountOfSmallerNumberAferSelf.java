@@ -23,7 +23,7 @@ public class CountOfSmallerNumberAferSelf {
                 long time = System.nanoTime();
                 Test.assertEquals(Utils.toList(Utils.getData("CountOfSmallerNumberAfterSelf_Result.data")),
                         method.invoke(null, Utils.getData("CountOfSmallerNumberAfterSelf.data")));
-                System.out.println("Large case: it takes " + (System.nanoTime() - time) / 1000000 + "ms to run method " + methodName);
+                Utils.printElapsedTime(time, methodName);
             }
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);

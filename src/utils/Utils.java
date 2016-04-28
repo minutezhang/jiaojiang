@@ -280,4 +280,8 @@ public class Utils {
         input[j] ^= input[i];
         input[i] ^= input[j];
     }
+
+    public static void printElapsedTime(long time, String method) {
+        System.out.println("It took " + (System.nanoTime() - time) / 1000000 + "ms to run method " + method);
+    }
 }

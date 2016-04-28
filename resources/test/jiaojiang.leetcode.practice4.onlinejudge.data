@@ -92,4 +92,13 @@ BurstBalloons maxCoins2
 BurstBalloons maxCoins2Mem
 BurstBalloons maxCoinsDp
 CreateMaximumNumber maxNumber
-CreateMaximumNumber maxNumberDp
+CreateMaximumNumber maxNumberOpt
+CreateMaximumNumber maxNumber2Opt
+PowerOfFour isPowerOfFour
+IntegerBreak integerBreak
+IntegerBreak integerBreakMem
+IntegerBreak integerBreakDp
+FlattenNestedListIterator WHATEVER
+ReverseString reverseString
+FindMedianFromDataStream WHATEVER
+ReverseVowelsOfAString reverseVowels

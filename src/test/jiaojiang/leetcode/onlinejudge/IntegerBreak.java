@@ -9,16 +9,21 @@ import java.lang.reflect.Method;
 /**
  * @author zhang
  *
- * Created on Apr 3, 2016
+ * Created on Apr 19, 2016
  */
-public class CountOfRangeSum {
+public class IntegerBreak {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
-            Method method = Class.forName(packageName + "." + className).getMethod(methodName, int[].class, int.class, int.class);
-            Test.assertEquals(3, method.invoke(null, new int[]{-2, 5, -1}, -2, 2));
-
+            Method method = Class.forName(packageName + "." + className).getMethod(methodName, int.class);
+            Test.assertEquals(1, method.invoke(null, 2));
+            Test.assertEquals(2, method.invoke(null, 3));
+            Test.assertEquals(9, method.invoke(null, 6));
+            Test.assertEquals(36, method.invoke(null, 10));
             long time = System.nanoTime();
-            Test.assertEquals(48645, method.invoke(null, Utils.getData("CountOfRangeSum.data"), 1, 4));
+            Test.assertEquals(2916, method.invoke(null, 22));
+            Utils.printElapsedTime(time, methodName);
+            time = System.nanoTime();
+            Test.assertEquals(3188646, method.invoke(null, 41));
             Utils.printElapsedTime(time, methodName);
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
