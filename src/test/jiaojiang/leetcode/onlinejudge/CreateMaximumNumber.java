@@ -31,9 +31,9 @@ public class CreateMaximumNumber {
 
                 if (methodName.endsWith("2Opt")) {
                     time = System.nanoTime();
-                    Test.assertEquals(Utils.getData("CreateMaximumNumber_Result.data"),
-                            (int[]) method.invoke(null, Utils.getData("CreateMaximumNumber1.data"),
-                                    Utils.getData("CreateMaximumNumber2.data"), 500));
+                    Test.assertEquals(Utils.getIntArray("CreateMaximumNumber_Result.data"),
+                            (int[]) method.invoke(null, Utils.getIntArray("CreateMaximumNumber1.data"),
+                                    Utils.getIntArray("CreateMaximumNumber2.data"), 500));
                     Utils.printElapsedTime(time, methodName);
                 }
             }

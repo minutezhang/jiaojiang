@@ -1,8 +1,6 @@
 package utils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collection;
+import java.util.*;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
@@ -13,13 +11,82 @@ import java.io.IOException;
  * @since: Sep 10, 2013 10:52:40 AM
  */
 public class Utils {
-    public static int[] getData(String filename) {
+
+    public static String[] getStringArray(String filename) {
         InputStream is  = Utils.class.getResourceAsStream("/" + filename);
         try {
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             String line = br.readLine();
-            int[] ret = new int[Integer.parseInt(line)];
+            String[] ret = new String[Integer.parseInt(line)];
+
+            for ( int i = 0; i < ret.length && (line = br.readLine()) != null; i++) {
+                ret[i] = line;
+            }
+
+            br.close();
+            isr.close();
+            is.close();
+
+            return ret;
+        } catch (IOException e) {
+            return new String[0];
+        }
+    }
+
+    public static int[] getIntArray(String filename) {
+        return fromStringArray(getStringArray(filename));
+    }
+
+    private static int[] fromStringArray(String[] stringArray) {
+        int[] ret = new int[stringArray.length];
+        for (int i = 0; i < ret.length; i++) {
+            ret[i] = Integer.parseInt(stringArray[i]);
+        }
+        return ret;
+    }
+
+    private static int[] fromString(String line) {
+        String[] dataStr = line.split(",");
+        int[] array = new int[dataStr.length];
+        for (int i = 0; i < dataStr.length; i++) {
+            array[i] = Integer.parseInt(dataStr[i]);
+        }
+
+        return array;
+    }
+
+
+    public static int[][] get2DIntArray(String filename) {
+        InputStream is  = Utils.class.getResourceAsStream("/" + filename);
+        try {
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String[] dimension = br.readLine().split(",");
+            int[][] ret = new int[Integer.parseInt(dimension[0])][Integer.parseInt(dimension[1])];
+
+            String line;
+            for ( int i = 0; i < ret.length && (line = br.readLine()) != null; i++) {
+                ret[i] = fromString(line);
+            }
+
+            br.close();
+            isr.close();
+            is.close();
+
+            return ret;
+        } catch (IOException e) {
+            return new int[0][0];
+        }
+    }
+
+    public static Integer[] getIntegerArray(String filename) {
+        InputStream is  = Utils.class.getResourceAsStream("/" + filename);
+        try {
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String line = br.readLine();
+            Integer[] ret = new Integer[Integer.parseInt(line)];
 
             for ( int i = 0; i < ret.length && (line = br.readLine()) != null; i++) {
                 ret[i] = Integer.parseInt(line);
@@ -31,12 +98,22 @@ public class Utils {
 
             return ret;
         } catch (IOException e) {
-            return new int[0];
+            return new Integer[0];
         }
     }
 
     public static List<Integer> toList(int[] data) {
         List<Integer> ret = new ArrayList<Integer>();
+
+        for (int i : data) {
+            ret.add(i);
+        }
+
+        return ret;
+    }
+
+    public static Set<Integer> toSet(int[] data) {
+        Set<Integer> ret = new HashSet<Integer>();
 
         for (int i : data) {
             ret.add(i);

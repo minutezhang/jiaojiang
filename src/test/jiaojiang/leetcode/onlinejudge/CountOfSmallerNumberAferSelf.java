@@ -21,8 +21,8 @@ public class CountOfSmallerNumberAferSelf {
 
             if (!"countSmaller".equals(methodName)) {
                 long time = System.nanoTime();
-                Test.assertEquals(Utils.toList(Utils.getData("CountOfSmallerNumberAfterSelf_Result.data")),
-                        method.invoke(null, Utils.getData("CountOfSmallerNumberAfterSelf.data")));
+                Test.assertEquals(Utils.toList(Utils.getIntArray("CountOfSmallerNumberAfterSelf_Result.data")),
+                        method.invoke(null, Utils.getIntArray("CountOfSmallerNumberAfterSelf.data")));
                 Utils.printElapsedTime(time, methodName);
             }
         } catch (Exception e) {

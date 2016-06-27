@@ -5,29 +5,32 @@ import utils.Utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.List;
 
 /**
  * @author zhang
  *
- * Created on Apr 27, 2016
+ * Created on Jun 1, 2016
  */
-public class TheSkylineProblem {
+public class DungeonGame {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
             Method method = Class.forName(packageName + "." + className).getMethod(methodName, int[][].class);
-            List<int[]> expected = Utils.getList(new int[][]{{2, 10}, {3, 15}, {7, 12}, {12, 0}, {15, 10}, {20, 8}, {24, 0}});
-            int[][] heights = new int[][] {
-                    {2, 9, 10},
-                    {3, 7, 15},
-                    {5, 12, 12},
-                    {15, 20, 10},
-                    {19, 24, 8}
-            };
-            Test.assertEquals(expected, method.invoke(null, heights));
+
+
+            Test.assertEquals(4, method.invoke(null, (Object)new int[][]{{0, -3}}));
+
+            Test.assertEquals(7, method.invoke(null, (Object)new int[][]{
+                    {-2, -3, 3},
+                    {-5, -10, 1},
+                    {10, 30, -5}
+            }));
+
+            if (methodName.endsWith("Dp")) {
+                Test.assertEquals(85, method.invoke(null, (Object) Utils.get2DIntArray("DungeonGame.data")));
+            }
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();
         }
-    }    
+    } 
 }
