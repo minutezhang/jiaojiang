@@ -1,7 +1,7 @@
 package companies.facebook.glassdoor;
 
-import jiaojiang.leetcode.practice2.onlinejudge.TreeNode;
 import utils.Utils;
+import utils.TreeNode;
 
 import java.util.Stack;
 

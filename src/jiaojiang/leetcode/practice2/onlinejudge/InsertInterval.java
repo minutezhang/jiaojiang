@@ -1,6 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
 import utils.Utils;
+import utils.Interval;
 
 import java.util.ArrayList;
 

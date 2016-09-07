@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: May 6, 2013 10:35:22 PM
@@ -43,7 +45,7 @@ public class RotateList {
 //        rotateRight(getLinkedList(), 2).print(); // 4->5->1->2->3->null
 //        rotateRight(getLinkedList(), 9).print(); // 2->3->4->5->1->null
 //        rotateRight(getLinkedList2(), 1).print(); // 2->1->null
-        rotateRight(getLinkedList2(), 2).print(); // 1->2->null
+        ListNode.print(rotateRight(getLinkedList2(), 2)); // 1->2->null
 //        rotateRight(new ListNode(1), 2).print(); // 1->null
     }
 

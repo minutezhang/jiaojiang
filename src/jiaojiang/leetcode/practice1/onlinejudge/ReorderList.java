@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Nov 5, 2013 10:13:55 PM
@@ -75,11 +77,11 @@ public class ReorderList {
     }
 
     private static void test() {
-        ListNode head = ListNode.constructList(10);
-        head.print();
+        ListNode head = ListNode.getSampleNode(10);
+        ListNode.print(head);
 
         reorderList(head);
-        head.print();
+        ListNode.print(head);
     }
 
     public static void main(String[] args){

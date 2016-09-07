@@ -1,7 +1,7 @@
 package companies.facebook.mitbbs;
 
 import utils.NTreeNode;
-import jiaojiang.leetcode.practice1.onlinejudge.TreeNode;
+import utils.TreeNode;
 
 import java.util.Stack;
 
@@ -54,7 +54,7 @@ public class TreePreorderTraversal {
         preorderIter(root);
 
         System.out.println();
-        preorderBinaryTree(TreeNode.construct());
+        preorderBinaryTree(TreeNode.getSampleTree());
     }
 
     public static void preorderBinaryTree(TreeNode root) {

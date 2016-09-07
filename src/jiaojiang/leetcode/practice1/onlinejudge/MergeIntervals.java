@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.Interval;
+
 import java.util.*;
 
 /**

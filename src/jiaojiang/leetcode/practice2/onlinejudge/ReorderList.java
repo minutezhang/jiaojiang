@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Feb 2, 2014 2:55:48 PM
@@ -49,7 +51,7 @@ public class ReorderList {
     }
 
     private static void test() {
-        ListNode head = ListNode.getSampleList(10);
+        ListNode head = ListNode.getSampleNode(10);
         ListNode.print(head);
 
         reorderList(head);

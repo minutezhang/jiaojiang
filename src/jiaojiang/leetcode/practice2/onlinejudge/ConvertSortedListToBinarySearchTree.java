@@ -1,5 +1,8 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.TreeNode;
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Jan 26, 2014 10:33:16 PM
@@ -38,9 +41,9 @@ public class ConvertSortedListToBinarySearchTree {
     }
 
     private static void test() {
-        TreeNode.inOrder(sortedListToBST(ListNode.getSampleList(3)));
+        TreeNode.inOrder(sortedListToBST(ListNode.getSampleNode(3)));
         System.out.println("");
-        TreeNode.inOrder(sortedListToBST(ListNode.getSampleList(7)));
+        TreeNode.inOrder(sortedListToBST(ListNode.getSampleNode(7)));
     }
 
     public static void main(String[] args) {

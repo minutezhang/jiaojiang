@@ -18,6 +18,7 @@ public class Pow {
             Test.assertEquals(1/243.0, method.invoke(null, 3, -5));
             Test.assertEquals(1.0, method.invoke(null, 1.00000, -2147483648));
             Test.assertEquals(1.0, method.invoke(null, 0.44528, 0));
+            Test.assertEquals(0.0, method.invoke(null, 2.00000, -2147483648));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

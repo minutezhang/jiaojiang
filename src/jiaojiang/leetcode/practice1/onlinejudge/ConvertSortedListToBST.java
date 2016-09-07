@@ -1,5 +1,8 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.TreeNode;
+import utils.ListNode;
+
 import java.util.List;
 import java.util.Arrays;
 

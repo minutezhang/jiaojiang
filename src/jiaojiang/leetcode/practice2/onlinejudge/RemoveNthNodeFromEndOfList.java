@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Jan 20, 2014 10:48:38 AM
@@ -36,9 +38,9 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     private static void test() {
-        ListNode.print(removeNthFromEnd(ListNode.getSampleList(9), 3));
-        ListNode.print(removeNthFromEnd(ListNode.getSampleList(3), 3));
-        ListNode.print(removeNthFromEnd(ListNode.getSampleList(4), 0));
+        ListNode.print(removeNthFromEnd(ListNode.getSampleNode(9), 3));
+        ListNode.print(removeNthFromEnd(ListNode.getSampleNode(3), 3));
+        ListNode.print(removeNthFromEnd(ListNode.getSampleNode(4), 0));
     }
 
     public static void main(String[] args) {

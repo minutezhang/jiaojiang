@@ -34,6 +34,8 @@ public class MergeIntervals {
             expected.add(new Interval(0, 4));
             Test.assertEquals(expected, method.invoke(null, Interval.getSampleIntervals4()));
 
+            expected.clear();
+            Test.assertEquals(expected, method.invoke(null, new ArrayList<Interval>()));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

@@ -40,6 +40,7 @@ public class Test {
             System.err.println("test case FAILED: (" + expected + ") != (" + actual + ")");
         }
     }
+    
 
     public static void assertEquals(char[][] expected, char[][] actual) {
         if (expected == null && actual == null) {

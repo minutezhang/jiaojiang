@@ -1,6 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
 import utils.Utils;
+import utils.ListNode;
 
 /**
  * @author: zhang
@@ -36,8 +37,8 @@ public class LinkedListCycleII {
     }
 
     private static void test() {
-        Utils.printTestln(detectCycle(ListNode.getSampleList(1)), null);
-        Utils.printTestln(detectCycle(ListNode.getSampleList(2)), null);
+        Utils.printTestln(detectCycle(ListNode.getSampleNode(1)), null);
+        Utils.printTestln(detectCycle(ListNode.getSampleNode(2)), null);
     }
 
     public static void main(String[] args) {

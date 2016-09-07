@@ -17,17 +17,17 @@ public class RemoveDuplicatesFromSortedArrayII {
             int[] A = new int[]{1, 1, 1, 2, 2, 3};
             int[] expected = new int[]{1, 1, 2, 2, 3};
             int length = (Integer) method.invoke(null, A);
-            Test.assertEquals(length, 5);
+            Test.assertEquals(5, length);
             Test.assertEquals(A, expected, 5);
 
             A = new int[]{1};
             length = (Integer) method.invoke(null, A);
-            Test.assertEquals(length, 1);
+            Test.assertEquals(1, length);
             Test.assertEquals(A, new int[]{1}, 1);
 
             A = new int[0];
             length = (Integer) method.invoke(null, A);
-            Test.assertEquals(length, 0);
+            Test.assertEquals(0, length);
             Test.assertEquals(A, new int[0], 0);
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);

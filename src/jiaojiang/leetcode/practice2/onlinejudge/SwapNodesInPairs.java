@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: mizhang
  * @since: Jan 10, 2014 2:42:06 PM
@@ -30,7 +32,7 @@ public class SwapNodesInPairs {
     }
 
     private static void test() {
-        ListNode.print(swapPairs(ListNode.getSampleList(4)));
+        ListNode.print(swapPairs(ListNode.getSampleNode(4)));
     }
 
     public static void main(String[] args) {

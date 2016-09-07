@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Feb 2, 2014 9:43:13 PM
@@ -22,8 +24,8 @@ public class InsertionSortList {
     }
 
     private static void test() {
-        ListNode.print(insertionSortList(ListNode.getSampleRandomList(10)));
-        ListNode.print(insertionSortList(ListNode.getSampleRandomList(10)));
+        ListNode.print(insertionSortList(ListNode.getSampleNode(10)));
+        ListNode.print(insertionSortList(ListNode.getSampleNode(10)));
     }
 
     public static void main(String[] args) {

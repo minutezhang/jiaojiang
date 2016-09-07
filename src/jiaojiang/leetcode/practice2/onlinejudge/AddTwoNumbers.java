@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Jan 13, 2014 9:58:31 PM
@@ -56,7 +58,7 @@ public class AddTwoNumbers {
 
     private static void test() {
         //321 + 54 = 375
-        ListNode.print(addTwoNumbers(ListNode.getSampleList(3), ListNode.getSampleList(4, 2)));
+        ListNode.print(addTwoNumbers(ListNode.getSampleNode(3), ListNode.getSampleNode(4, 2)));
     }
 
     public static void main(String[] args) {

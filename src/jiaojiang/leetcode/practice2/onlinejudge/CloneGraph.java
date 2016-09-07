@@ -1,6 +1,8 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
 
+import utils.UndirectedGraphNode;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.LinkedList;

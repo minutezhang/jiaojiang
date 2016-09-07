@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: mizhang
  * @since: Jan 15, 2014 4:15:13 PM
@@ -37,7 +39,7 @@ public class PartitionList {
     }
 
     private static void test() {
-        ListNode.print(partition(ListNode.getSampleRandomList(6), 30));
+        ListNode.print(partition(ListNode.getSampleNode(6), 30));
     }
 
     public static void main(String[] args) {

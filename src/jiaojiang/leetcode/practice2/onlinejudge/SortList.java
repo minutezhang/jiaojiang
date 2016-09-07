@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: mizhang
  * @since: Jan 9, 2014 5:03:40 PM
@@ -50,7 +52,7 @@ public class SortList {
     }
 
     private static void test() {
-        ListNode head = ListNode.getSampleRandomList(10);
+        ListNode head = ListNode.getSampleNode(10);
 
         ListNode.print(head);
         ListNode.print(sortList(head));

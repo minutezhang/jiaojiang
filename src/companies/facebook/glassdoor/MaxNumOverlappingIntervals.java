@@ -1,11 +1,10 @@
 package companies.facebook.glassdoor;
 
-import jiaojiang.leetcode.practice2.onlinejudge.Interval;
-
 import java.util.List;
 import java.util.Arrays;
 
 import utils.Utils;
+import utils.Interval;
 
 /**
  * @author: zhang

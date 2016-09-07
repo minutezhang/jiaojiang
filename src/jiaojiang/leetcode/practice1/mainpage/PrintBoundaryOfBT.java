@@ -1,10 +1,11 @@
 package jiaojiang.leetcode.practice1.mainpage;
 
-import jiaojiang.leetcode.practice1.onlinejudge.TreeNode;
 import jiaojiang.leetcode.practice1.onlinejudge.RecoverBST;
 
 import java.util.List;
 import java.util.ArrayList;
+
+import utils.TreeNode;
 
 /**
  * @author: mizhang

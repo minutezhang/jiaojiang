@@ -120,3 +120,12 @@ HouseRobberII rob
 HouseRobberII robDp
 WordSearchII findWords
 WordSearchII findWordsTrie
+#ShortestPalindrome shortestPalindrome
+PalindromePermutation canPermutePalindrome
+CombinationSumIII combinationSum3
+SumOfTwoInteger getSum
+SuperPow superPow
+#KthSmallestElementInASortedMatrix kthSmallest
+RansomNote canConstruct
+#WiggleSubsequence wiggleMaxLength
+FindKPairsWithSmallestSums kSmallestPairs

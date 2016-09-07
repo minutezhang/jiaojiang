@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.TreeNode;
+
 /**
  * @author: zhang
  * @since: Apr 24, 2013 9:10:49 PM

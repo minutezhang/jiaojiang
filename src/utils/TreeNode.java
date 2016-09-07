@@ -100,6 +100,20 @@ public class TreeNode {
     }
 
     /*
+           1
+         /
+        2
+
+    */
+    public static TreeNode getSampleTree5() {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+
+        return root;
+    }
+
+
+    /*
              8
           /      \
          4       19

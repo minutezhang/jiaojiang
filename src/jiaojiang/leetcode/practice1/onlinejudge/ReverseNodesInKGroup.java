@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: May 14, 2013 8:53:29 PM
@@ -57,7 +59,7 @@ public class ReverseNodesInKGroup {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        reverseKGroup(head, 3).print();
+        ListNode.print(reverseKGroup(head, 3));
     }
 
     public static void main(String[] args) {

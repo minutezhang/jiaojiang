@@ -1,6 +1,6 @@
 package companies.facebook.glassdoor;
 
-import jiaojiang.leetcode.practice2.onlinejudge.ListNode;
+import utils.ListNode;
 
 /**
  * @author: zhang
@@ -14,9 +14,9 @@ public class ReverseLinkedList {
     }
 
     private static void test() {
-        ListNode.print(reverse(ListNode.getSampleList(10)));
-        ListNode.print(reverse(ListNode.getSampleList(1)));
-        ListNode.print(reverse(ListNode.getSampleList(0)));
+        ListNode.print(reverse(ListNode.getSampleNode(10)));
+        ListNode.print(reverse(ListNode.getSampleNode(1)));
+        ListNode.print(reverse(ListNode.getSampleNode(0)));
     }
 
     public static void main(String[] args) {

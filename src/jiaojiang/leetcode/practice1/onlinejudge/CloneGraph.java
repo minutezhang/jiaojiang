@@ -1,6 +1,8 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
 
+import utils.UndirectedGraphNode;
+
 import java.util.*;
 
 /**
@@ -31,9 +33,7 @@ public class CloneGraph {
              / \
              \_/
      */
-
-
-
+    
     public static UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
 

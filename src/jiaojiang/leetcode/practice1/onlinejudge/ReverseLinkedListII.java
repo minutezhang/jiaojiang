@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: mizhang@akamai.com
  */
@@ -74,9 +76,9 @@ public class ReverseLinkedListII {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
 
-        head.print();
+        ListNode.print(head);
 
-        reverseBetween(head, 1, 3).print();
+        ListNode.print(reverseBetween(head, 1, 3));
     }
 
     public static void main(String[] args) {

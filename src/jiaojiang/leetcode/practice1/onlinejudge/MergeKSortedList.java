@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 import java.util.ArrayList;
 
 /**
@@ -72,7 +74,7 @@ public class MergeKSortedList {
         list2.next.next = new ListNode(6);
         list2.next.next.next = new ListNode(8);
 
-        mergeLists(list1,  list2).print();
+        ListNode.print(mergeLists(list1,  list2));
     }
 
     public static void main(String[] args){

@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Apr 28, 2013 11:41:37 PM
@@ -43,7 +45,7 @@ public class PartitionList {
         head.next.next.next.next = new ListNode(5);
         head.next.next.next.next.next = new ListNode(2);
 
-        partition(head, 3).print();
+        ListNode.print(partition(head, 3));
     }
 
     public static void main(String[] args) {

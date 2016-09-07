@@ -1,6 +1,7 @@
 package jiaojiang.leetcode.practice1.onlinejudge;
 
 import utils.Utils;
+import utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -48,7 +49,7 @@ public class BinaryTreePreorderTraversal {
     }
 
     public static void test() {
-        Utils.printListln(preorderTraversal(TreeNode.construct()));
+        Utils.printListln(preorderTraversal(TreeNode.getSampleTree()));
     }
 
     public static void main(String[] args) {

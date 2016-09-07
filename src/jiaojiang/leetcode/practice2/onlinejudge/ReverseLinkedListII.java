@@ -1,5 +1,7 @@
 package jiaojiang.leetcode.practice2.onlinejudge;
 
+import utils.ListNode;
+
 /**
  * @author: zhang
  * @since: Jan 23, 2014 11:07:42 PM
@@ -38,8 +40,8 @@ public class ReverseLinkedListII {
     }
 
     private static void test() {
-        ListNode.print(ListNode.getSampleList(5));
-        ListNode.print(reverseBetween(ListNode.getSampleList(5), 2, 4));
+        ListNode.print(ListNode.getSampleNode(5));
+        ListNode.print(reverseBetween(ListNode.getSampleNode(5), 2, 4));
     }
 
     public static void main(String[] args) {
