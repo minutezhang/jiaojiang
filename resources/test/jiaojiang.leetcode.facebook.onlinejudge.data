@@ -1,20 +1,27 @@
 #   1 Two Sum
 TwoSum twoSum
 #	10	Regular Expression Matching
+RegularExpressionMatching isMatch
 #	13	Roman to Integer
 #15 Three sum
 ThreeSum threeSum
 #	17	Letter Combinations of a Phone Number
+LetterCombinationsOfAPhoneNumber letterCombinations
 #	20	Valid Parentheses
+ValidParentheses isValid
 #	23	Merge k Sorted Lists
-#	25	Reverse Nodes in k-Group
+MergeKSortedLists mergeKLists
+###	25	Reverse Nodes in k-Group
 #	26	Remove Duplicates from Sorted Array
 RemoveDuplicatesFromSortedArray removeDuplicates
-#	28	Implement strStr()
-#	33	Search in Rotated Sorted Array
-#	38	Count and Say
+###	28	Implement strStr()
+###	33	Search in Rotated Sorted Array
+###	38	Count and Say
 #	43	Multiply Strings
+MultiplyStrings multiply
 #	44	Wildcard Matching
+WildcardMatching isMatchMem
+WildcardMatching isMatchRecursion
 #	49	Group Anagrams
 #GroupAnagrams
 #	50	Pow(x, n)
@@ -25,7 +32,7 @@ MergeIntervals merge
 InsertInterval insert
 #	67	Add Binary
 AddBinary addBinary
-#	69	Sqrt(x)
+###	69	Sqrt(x)
 #	71	Simplify Path
 SimplifyPath simplifyPath
 #	75	Sort Colors
@@ -38,17 +45,20 @@ Subsets subsets
 WordSearch exist
 #	80	Remove Duplicates from Sorted Array II
 RemoveDuplicatesFromSortedArrayII removeDuplicates 
-#	85	Maximal Rectangle
+###	85	Maximal Rectangle
 #	88	Merge Sorted Array
 #MergeSortedArray
 #	90	Subsets II
 SubsetsII subsetsWithDup
 #	91	Decode Ways
+DecodeWays numDecodings
+DecodeWays numDecodingsDP
+DecodeWays numDecodingsRecursive
 #	98	Validate Binary Search Tree
 ValidateBinarySearchTree isValidBST
 #	102	Binary Tree Level Order Traversal
 BinaryTreeLevelOrderTraversal levelOrder
-#	117	Populating Next Right Pointers in Each Node II
+###	117	Populating Next Right Pointers in Each Node II
 #	121	Best Time to Buy and Sell Stock
 BestTimeToBuyAndSellStock maxProfit
 #	125	Valid Palindrome
@@ -62,26 +72,27 @@ LongestConsecutiveSequence longestConsecutive
 #CloneGraph clone
 #	139	Word Break
 WordBreak wordBreak
-#	146	LRU Cache
-#	157	Read N Characters Given Read4                             <------ 157 ---------
-#	158	Read N Characters Given Read4 II - Call multiple times    <------ 158 ---------
+###	146	LRU Cache
+###	157	Read N Characters Given Read4                             <------ 157 ---------
+###	158	Read N Characters Given Read4 II - Call multiple times    <------ 158 ---------
 #	161	One Edit Distance                                         <------ 161 ---------
 OneEditDistance isOneEditDistance 
-#	168	Excel Sheet Column Title
+###	168	Excel Sheet Column Title
 #	173	Binary Search Tree Iterator
 BinarySearchTreeIterator iterate
 #	200	Number of Islands
 NumberOfIslands numIslands
 #	206	Reverse Linked List
 ReverseLinkedList reverseList
-#	208	Implement Trie (Prefix Tree)
+###	208	Implement Trie (Prefix Tree)
 #	209	Minimum Size Subarray Sum
 MinimumSizeSubarraySum minSubArrayLen
-#	210	Course Schedule II
-#	211	Add and Search Word - Data structure design
+###	210	Course Schedule II
+###	211	Add and Search Word - Data structure design
 #	215	Kth Largest Element in an Array
-#	218	The Skyline Problem
-#	221	Maximal Square
+KthLargestElementInAnArray findKthLargest
+###	218	The Skyline Problem
+###	221	Maximal Square
 #	234	Palindrome Linked List
 PalindromeLinkedList isPalindrome
 #	235	Lowest Common Ancestor of a Binary Search Tree
@@ -114,7 +125,7 @@ HIndexII hIndex
 #FindTheCelebrity findCelebrity
 #	278	First Bad Version
 FirstBadVersion firstBadVersion
-#	282	Expression Add Operators
+###	282	Expression Add Operators
 #	283	Move Zeroes
 MoveZeroes moveZeroes
 #	285	Inorder Successor in BST
@@ -125,9 +136,9 @@ WallsAndGates wallsAndGates
 SerializedAndDeserializeBinaryTree serialize
 #	301	Remove Invalid Parentheses
 #RemoveInvalidParentheses removeInvalidParentheses
-#	311	Sparse Matrix Multiplication
+###	311	Sparse Matrix Multiplication
 #	314	Binary Tree Vertical Order Traversal
 BinaryTreeVerticalOrderTraversal verticalOrder
 #	325	Maximum Size Subarray Sum Equals k
 MaximumSizeSubarraySumEqualsK maxSubArrayLen
-#	334	Increasing Triplet Subsequence
+###	334	Increasing Triplet Subsequence

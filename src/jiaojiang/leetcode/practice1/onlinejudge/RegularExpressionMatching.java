@@ -6,7 +6,7 @@ package jiaojiang.leetcode.practice1.onlinejudge;
  */
 
 //todo
-public class RegularExpressionMatch {
+public class RegularExpressionMatching {
     /*
     Implement regular expression matching with support for '.' and '*'.
 

@@ -6,17 +6,22 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * @author: mizhang
- * @time: 2/2/15 11:47 AM
+ * @author zhang
+ *
+ * Created on Sep 7, 2016
  */
-public class MultiplyStrings {
+public class WildcardMatching {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
             Method method = Class.forName(packageName + "." + className).getMethod(methodName, String.class, String.class);
-            Test.assertEquals(String.valueOf(1234 * 45), method.invoke(null, "1234", "45"));
-            Test.assertEquals("0", method.invoke(null, "0", "52"));
-            Test.assertEquals("0", method.invoke(null, "1234", "0"));
-            Test.assertEquals("1234", method.invoke(null, "1234", "1"));
+            Test.assertFalse((Boolean)method.invoke(null, "aa","a"));
+            Test.assertFalse((Boolean)method.invoke(null, "aab","c*a*b*"));
+            Test.assertFalse((Boolean)method.invoke(null, "aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba", "a*******b"));
+
+            Test.assertTrue((Boolean)method.invoke(null, "aa","aa"));
+            Test.assertTrue((Boolean)method.invoke(null, "aa","*"));
+            Test.assertTrue((Boolean)method.invoke(null, "aa","a*"));
+            Test.assertTrue((Boolean)method.invoke(null, "ab","?*"));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

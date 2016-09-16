@@ -19,6 +19,10 @@ public class DecodeWays {
             Test.assertEquals(1, method.invoke(null, "201"));
             Test.assertEquals(0, method.invoke(null, ""));
             Test.assertEquals(0, method.invoke(null, "0"));
+            Test.assertEquals(1, method.invoke(null, "27"));
+            Test.assertEquals(1, method.invoke(null, "99"));
+            Test.assertEquals(1, method.invoke(null, "10"));
+            Test.assertEquals(1769472, method.invoke(null, "7541387519572282368613553811323167125532172369624572591562685959575371877973171856836975137559677665"));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

@@ -2,21 +2,21 @@ package test.jiaojiang.leetcode.onlinejudge;
 
 import utils.Test;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author zhang
  *
- * Created on Mar 10, 2016
+ * Created on Sep 15, 2016
  */
-public class KthLargestElementInAnArray {
+public class ReverseWordsInAStringII {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
-            Method method = Class.forName(packageName + "." + className).getMethod(methodName, int[].class, int.class);
-            Test.assertEquals(5, method.invoke(null, new int[]{3, 2, 1, 5, 6, 4}, 2));
-            Test.assertEquals(1, method.invoke(null, new int[]{2, 1}, 2));
-            Test.assertEquals(3, method.invoke(null, new int[]{3, 1, 2, 4}, 2));
+            Method method = Class.forName(packageName + "." + className).getMethod(methodName, char[].class);
+            char[] string = "the sky is blue".toCharArray();
+            method.invoke(null, string);
+            Test.assertEquals("blue is sky the", new String(string));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

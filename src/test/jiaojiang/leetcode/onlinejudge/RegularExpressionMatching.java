@@ -22,7 +22,7 @@ public class RegularExpressionMatching {
             Test.assertTrue((Boolean)method.invoke(null, "aab", "c*a*b"));
             Test.assertFalse((Boolean)method.invoke(null, "ab", ".*c"));
             Test.assertTrue((Boolean)method.invoke(null, "aa", "a*"));
-            Test.assertFalse((Boolean)method.invoke(null, "baccbbcbcacacbbc", "c*.*b*c*ba*b*b*.a*"));
+            Test.assertTrue((Boolean)method.invoke(null, "baccbbcbcacacbbc", "c*.*b*c*ba*b*b*.a*"));
             Test.assertTrue((Boolean)method.invoke(null, "a", "ab*"));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);

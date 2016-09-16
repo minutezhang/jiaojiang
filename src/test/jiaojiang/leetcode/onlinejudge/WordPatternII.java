@@ -8,15 +8,17 @@ import java.lang.reflect.Method;
 /**
  * @author zhang
  *
- * Created on Mar 10, 2016
+ * Created on Sep 12, 2016
  */
-public class KthLargestElementInAnArray {
+public class WordPatternII {
     public static void test(String packageName, String className, String methodName) throws InvocationTargetException, IllegalAccessException {
         try {
-            Method method = Class.forName(packageName + "." + className).getMethod(methodName, int[].class, int.class);
-            Test.assertEquals(5, method.invoke(null, new int[]{3, 2, 1, 5, 6, 4}, 2));
-            Test.assertEquals(1, method.invoke(null, new int[]{2, 1}, 2));
-            Test.assertEquals(3, method.invoke(null, new int[]{3, 1, 2, 4}, 2));
+            Method method = Class.forName(packageName + "." + className).getMethod(methodName, String.class, String.class);
+            
+            Test.assertTrue((Boolean)method.invoke(null, "abab", "redblueredblue"));
+            Test.assertTrue((Boolean)method.invoke(null, "aaaa", "asdasdasdasd"));
+
+            Test.assertFalse((Boolean)method.invoke(null, "aabb", "xyzabcxzyabc"));
         } catch (Exception e) {
             System.err.println("Cannot find method " + methodName + " for class " + packageName + "." + className);
             e.printStackTrace();

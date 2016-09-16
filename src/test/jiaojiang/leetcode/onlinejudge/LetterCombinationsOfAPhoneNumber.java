@@ -20,7 +20,6 @@ public class LetterCombinationsOfAPhoneNumber {
             for (String s : combinations) {
                 expected.add(s);
             }
-
             Test.assertEquals(expected, (List<String>)method.invoke(null, "23"));
 
             expected.clear();
