@@ -1,7 +1,5 @@
 package jiaojiang.leetcode.practice3.onlinejudge;
 
-import sun.misc.MessageUtils;
-
 /**
  * @author: mizhang
  * @time: 2/24/15 11:24 PM

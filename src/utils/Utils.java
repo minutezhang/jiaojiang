@@ -232,6 +232,13 @@ public class Utils {
         System.out.println();
     }
 
+    public static void printArrayln(long[] data) {
+        for (long i : data) {
+            System.out.print(i + "\t");
+        }
+        System.out.println();
+    }
+
     public static void print2DArrayln(int[][] data) {
         for (int[] i : data) {
             printArrayln(i);

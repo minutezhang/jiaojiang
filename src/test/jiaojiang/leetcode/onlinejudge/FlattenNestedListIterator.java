@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Arrays;
 
 import jiaojiang.leetcode.practice4.onlinejudge.FlattenNestedListIterator.NestedInteger;
-import sun.jvm.hotspot.utilities.Assert;
 
 /**
  * @author zhang

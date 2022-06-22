@@ -23,7 +23,11 @@ public class TestMain {
                 System.out.println("[" + (++count) + "] <" + className + "> - <" + methodName + ">");
                 try {
                     Method method = Class.forName(testPackageName + "." + className).getMethod("test", String.class, String.class, String.class);
+                    long start = System.nanoTime();
+
                     method.invoke(null, packageName, className, methodName);
+                    long finish = System.nanoTime();
+                    System.out.println("=== It took " + (finish - start) / 1000000 + " milliseconds to run");
                 } catch (Exception e) {
                     System.err.println("No method " + methodName + " for class " + className);
                     e.printStackTrace();
